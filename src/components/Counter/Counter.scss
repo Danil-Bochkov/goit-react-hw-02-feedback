@@ -1,0 +1,42 @@
+.Counter {
+  font-family: 'Roboto';
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+
+.Counter__title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.16;
+
+  text-align: center;
+  letter-spacing: 0.01em;
+
+  color: #1f3349;
+}
+
+.FeedbackField__btn {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.FeedbackField__btn button {
+  font-size: 14px;
+  line-height: 1.14;
+}
+
+.Statistics__values {
+  font-size: 14px;
+  line-height: 1.14;
+
+  display: flex;
+  gap: 7px;
+  flex-direction: column;
+}
+
+.message {
+  font-size: 14px;
+  line-height: 1.14;
+}
