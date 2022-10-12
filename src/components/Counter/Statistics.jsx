@@ -22,6 +22,8 @@ Statistics.propTypes = {
   good: PropTypes.number,
   neutral: PropTypes.number,
   bad: PropTypes.number,
+  total: PropTypes.number,
+  percentegeGoodFeedback: PropTypes.number,
 };
 
 export default Statistics;

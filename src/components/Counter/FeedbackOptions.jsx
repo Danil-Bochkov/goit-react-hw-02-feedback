@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const FeedbackOptions = ({ onGood, onNeutral, onBad }) => (
   <div className="FeedbackField">
@@ -15,5 +16,11 @@ const FeedbackOptions = ({ onGood, onNeutral, onBad }) => (
     </div>
   </div>
 );
+
+FeedbackOptions.propTypes = {
+  onGood: PropTypes.func,
+  onNeutral: PropTypes.func,
+  onBad: PropTypes.func,
+};
 
 export default FeedbackOptions;
