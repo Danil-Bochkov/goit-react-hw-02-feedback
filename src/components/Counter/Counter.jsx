@@ -12,18 +12,9 @@ class Counter extends React.Component {
     bad: 0,
   };
 
-  goodBtn = () =>
-    this.setState(prevState => {
-      return { good: prevState.good + 1 };
-    });
-  neutralBtn = () =>
-    this.setState(prevState => {
-      return { neutral: prevState.neutral + 1 };
-    });
-  badBtn = () =>
-    this.setState(prevState => {
-      return { bad: prevState.bad + 1 };
-    });
+  handleBtnsFeedback = btn => {
+    this.setState(prevState => ({ [btn]: prevState[btn] + 1 }));
+  };
 
   countTotalFeedback = () =>
     this.state.good + this.state.neutral + this.state.bad;
@@ -34,11 +25,7 @@ class Counter extends React.Component {
     return (
       <div className="Counter">
         <Section title="Please leave feedback">
-          <FeedbackOptions
-            onGood={this.goodBtn}
-            onNeutral={this.neutralBtn}
-            onBad={this.badBtn}
-          />
+          <FeedbackOptions onClickBtns={this.handleBtnsFeedback} />
         </Section>
         <Section title="Statistics">
           <Statistics
